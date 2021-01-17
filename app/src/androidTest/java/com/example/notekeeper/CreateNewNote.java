@@ -88,13 +88,13 @@ public class CreateNewNote {
 
         ViewInteraction editText = onView(
                 allOf(withId(R.id.text_note_title), withText("ABC"),
-                        withParent(withParent(IsInstanceOf.<View>instanceOf(android.view.ViewGroup.class))),
+                        withParent(withParent(IsInstanceOf.instanceOf(android.view.ViewGroup.class))),
                         isDisplayed()));
         editText.check(matches(withText("ABC")));
 
         ViewInteraction editText2 = onView(
                 allOf(withId(R.id.text_note_text), withText("Test data 1"),
-                        withParent(withParent(IsInstanceOf.<View>instanceOf(android.view.ViewGroup.class))),
+                        withParent(withParent(IsInstanceOf.instanceOf(android.view.ViewGroup.class))),
                         isDisplayed()));
         editText2.check(matches(withText("Test data 1")));
     }
